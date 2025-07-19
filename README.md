@@ -28,33 +28,23 @@ git clone --recursive https://github.com/jonaburg/picom
 cd picom
 
 ## Step 3: Build with Meson and Ninja
-Copy
-Edit
+
 meson --buildtype=release . build
 ninja -C build
 
 ## Step 5: Set Picom to Start with BSPWM
 Edit your bspwm configuration file:
 
-Copy
-Edit
 nano ~/.config/bspwm/bspwmrc
 
 Add this line near the bottom to launch Picom on startup:
 
-Copy
-Edit
 picom --config ~/.config/picom/picom.conf &
 
 Make sure your bspwmrc script is executable:
 
-Copy
-Edit
 chmod +x ~/.config/bspwm/bspwmrc
 
 ## Step 6: Verify Installation
 Run:
-
-Copy
-Edit
 picom --version
