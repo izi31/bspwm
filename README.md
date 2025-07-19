@@ -17,7 +17,8 @@ sudo xbps-install -Sy \
   libev-devel uthash-devel pcre-devel \
   libX11-devel libXext-devel libXrandr-devel \
   libXinerama-devel libXcomposite-devel libXdamage-devel \
-  libXfixes-devel libXrender-devel libXcursor-devel```
+  libXfixes-devel libXrender-devel libXcursor-devel
+```
 
 ## Step 2: Clone Picom-jonaburg
 Copied
