@@ -21,8 +21,6 @@ sudo xbps-install -Sy \
 ```
 
 ## Step 2: Clone Picom-jonaburg
-Copied
-Edit
 cd ~
 git clone --recursive https://github.com/jonaburg/picom
 cd picom
