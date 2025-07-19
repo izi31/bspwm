@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Redirect stdout and stderr to a log file (optional)
+exec >> /var/log/picom-autopause.log 2>&1
+
+exec /usr/local/bin/picom-autopause.sh
