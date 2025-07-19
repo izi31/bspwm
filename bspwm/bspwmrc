@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Terminate already running instances
+killall -q polybar
+
+# Set colors (Gruvbox Dark Hard)
+BG="#1d2021"
+FG="#ebdbb2"
+ACTIVE_BORDER="#fabd2f"
+FOCUSED_BORDER="#b8bb26"
+URGENT_BORDER="#fb4934"
+NORMAL_BORDER="#3c3836"
+
+# Set window gap and border
+bspc config border_width         2
+bspc config window_gap           8
+bspc config split_ratio          0.5
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+
+# Colors
+bspc config focused_border_color   "$FOCUSED_BORDER"
+bspc config active_border_color    "$ACTIVE_BORDER"
+bspc config normal_border_color    "$NORMAL_BORDER"
+bspc config urgent_border_color    "$URGENT_BORDER"
+
+# Padding (optional)
+bspc config top_padding    10
+bspc config bottom_padding 10
+bspc config left_padding   10
+bspc config right_padding  10
+
+# Set wallpaper (optional)
+feh --bg-scale ~/Pictures/wallpapers/gruvbox-wallpaper.png
+
+# Launch Polybar
+polybar mybar &
+
+# Launch SXHKD (keybindings)
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Set cursor
+xsetroot -cursor_name left_ptr
