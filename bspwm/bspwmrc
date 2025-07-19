@@ -41,3 +41,13 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Set cursor
 xsetroot -cursor_name left_ptr
+
+# BSPWM hook for picom disabled during Games
+bspc subscribe node_focus node_fullscreen | while read -r _; do
+    fullscreen_count=$(bspc query -N -n .fullscreen)
+    if [ "$fullscreen_count" -gt 0 ]; then
+        pkill -x picom
+    else
+        picom --config ~/.config/picom/picom.conf &
+    fi
+done
