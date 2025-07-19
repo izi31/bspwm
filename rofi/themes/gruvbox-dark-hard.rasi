@@ -1,0 +1,54 @@
+* {
+  bg:      #1d2021;
+  bg-alt:  #282828;
+  fg:      #ebdbb2;
+  red:     #fb4934;
+  green:   #b8bb26;
+  yellow:  #fabd2f;
+  blue:    #83a598;
+  purple:  #d3869b;
+  aqua:    #8ec07c;
+  gray:    #928374;
+  font:    "JetBrainsMono Nerd Font 12";
+}
+
+window {
+  background-color: @bg;
+  border: 2px;
+  border-color: @yellow;
+  padding: 10;
+}
+
+mainbox {
+  background-color: @bg;
+}
+
+inputbar {
+  background-color: @bg-alt;
+  text-color: @fg;
+  padding: 5;
+  border: 2px solid @blue;
+}
+
+listview {
+  background-color: @bg;
+  scrollbar: true;
+  scrollbar-width: 4px;
+  fixed-height: 0;
+  lines: 10;
+}
+
+element {
+  padding: 5px;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @blue;
+  text-color: @bg;
+}
+
+element alternate {
+  background-color: @bg-alt;
+}
